@@ -1,4 +1,3 @@
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -64,14 +63,16 @@ return {
         -- navigate buffer tabs
         ["<A-l>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["<A-h>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+
         ["<leader><leader>"] = {
-                  function() require("fzf-lua").files() end,
-                  desc = "FZF Lua File Picker"
+          function() require("snacks").picker("files", {}) end,
+          desc = "Find Files",
         },
-        ["<leader>k"] = {
-          function() require("fzf-lua").buffers() end,
-          desc = "See All Buffers"
-        },
+
+        -- ["<leader>k"] = {
+        --   function() require("snacks").picker.buffers() end,
+        --   desc = "Find Buffers",
+        -- },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {

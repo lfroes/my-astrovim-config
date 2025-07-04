@@ -41,7 +41,7 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
-        relativenumber = true, -- sets vim.opt.relativenumber
+        relativenumber = false, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
@@ -67,6 +67,16 @@ return {
         ["<leader><leader>"] = {
           function() require("snacks").picker("files", {}) end,
           desc = "Find Files",
+        },
+
+        ["<leader>FW"] = {
+          function() require("snacks").picker("grep_word", {}) end,
+          desc = "Grep word under cursor",
+        },
+
+        ["<leader>fw"] = {
+          function() require("snacks").picker("live_grep", {}) end,
+          desc = "Live grep",
         },
 
         -- ["<leader>k"] = {

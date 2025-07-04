@@ -10,6 +10,12 @@ return {
       "go",
       "gosum",
       "gomod",
+      "typescript",
+      "javascript",
+      "tsx",
+      "json",
+      "html",
+      "css",
       -- add more arguments for adding more treesitter parsers
     },
   },

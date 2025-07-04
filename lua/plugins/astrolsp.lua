@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- AstroLSP configuration enabled
 
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
@@ -40,11 +40,107 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "typescript-language-server",
+      "tailwindcss-language-server",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      typescript_language_server = {
+        filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "tsx", "jsx" },
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayEnumMemberValueHints = true,
+            },
+          },
+        },
+      },
+      tailwindcss = {
+        filetypes = {
+          "astro",
+          "astro-markdown",
+          "blade",
+          "clojure",
+          "django-html",
+          "htmldjango",
+          "edge",
+          "eelixir",
+          "elixir",
+          "ejs",
+          "erb",
+          "eruby",
+          "gohtml",
+          "gohtmltmpl",
+          "haml",
+          "handlebars",
+          "hbs",
+          "html",
+          "html-eex",
+          "heex",
+          "jade",
+          "leaf",
+          "liquid",
+          "markdown",
+          "mdx",
+          "mustache",
+          "njk",
+          "nunjucks",
+          "php",
+          "razor",
+          "slim",
+          "twig",
+          "css",
+          "less",
+          "postcss",
+          "sass",
+          "scss",
+          "stylus",
+          "sugarss",
+          "javascript",
+          "javascriptreact",
+          "reason",
+          "rescript",
+          "typescript",
+          "typescriptreact",
+          "vue",
+          "svelte",
+          "templ",
+        },
+        settings = {
+          tailwindCSS = {
+            classAttributes = { "class", "className", "class:list", "classList", "ngClass" },
+            lint = {
+              cssConflict = "warning",
+              invalidApply = "error",
+              invalidConfigPath = "error",
+              invalidScreen = "error",
+              invalidTailwindDirective = "error",
+              invalidVariant = "error",
+              recommendedVariantOrder = "warning",
+            },
+            validate = true,
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {

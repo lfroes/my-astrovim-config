@@ -58,6 +58,37 @@ return {
     mappings = {
       -- first key is the mode
       n = {
+        -- DAP mappings
+        -- Start/Continue
+        ["<F5>"] = {
+          function() require("dap").continue() end,
+          desc = "Start or Continue Debugging",
+        },
+        -- Toggle Breakpoint
+        ["<F9>"] = {
+          function() require("dap").toggle_breakpoint() end,
+          desc = "Toggle Breakpoint",
+        },
+        -- Step Over
+        ["<F10>"] = {
+          function() require("dap").step_over() end,
+          desc = "Step Over",
+        },
+        -- Step Into
+        ["<F11>"] = {
+          function() require("dap").step_into() end,
+          desc = "Step Into",
+        },
+        -- Step Out
+        ["<F12>"] = {
+          function() require("dap").step_out() end,
+          desc = "Step Out",
+        },
+        -- Open DAP UI
+        ["<leader>du"] = {
+          function() require("dapui").toggle() end,
+          desc = "Toggle DAP UI",
+        },
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
@@ -78,6 +109,8 @@ return {
           function() require("snacks").picker("live_grep", {}) end,
           desc = "Live grep",
         },
+
+        ["<leader>vt"] = { "<cmd>ToggleTerm direction=vertical<cr>", desc = "Toggle vertical terminal" },
 
         -- ["<leader>k"] = {
         --   function() require("snacks").picker.buffers() end,

@@ -8,6 +8,26 @@ return {
 
   -- == Examples of Adding Plugins ==
 
+  -- Tokyo Night theme
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "day",
+      transparent = false,
+      terminal_colors = true,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+        functions = {},
+        variables = {},
+        sidebars = "normal",
+        floats = "normal",
+      },
+    },
+  },
+
   { "andweeb/presence.nvim", enabled = false },
   {
     "ray-x/lsp_signature.nvim",
@@ -78,6 +98,20 @@ return {
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
       )
+    end,
+  },
+
+  {
+    "akinsho/toggleterm.nvim",
+    opts = function(_, opts)
+      opts.size = function(term)
+        if term.direction == "horizontal" then
+          return 15
+        elseif term.direction == "vertical" then
+          return math.floor(vim.o.columns * 0.33)
+        end
+        return 20
+      end
     end,
   },
 }

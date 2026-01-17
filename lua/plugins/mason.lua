@@ -12,12 +12,19 @@ return {
         "gopls",
         "typescript-language-server",
         "tailwindcss-language-server",
+        "deno",
 
         -- install formatters
         "stylua",
 
         -- install debuggers
         "debugpy",
+        "js-debug-adapter",
+        "java-debug-adapter",
+        "java-test",
+
+        -- install java language server
+        "jdtls",
 
         -- install any other package
         "tree-sitter-cli",

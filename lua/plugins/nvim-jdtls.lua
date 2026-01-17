@@ -4,14 +4,16 @@ return {
   ft = { "java" },
   dependencies = {
     "mfussenegger/nvim-dap",
+    "williamboman/mason.nvim",
   },
   opts = function()
-    local mason_registry = require "mason-registry"
+    -- Use mason's data directory directly
+    local mason_path = vim.fn.stdpath("data") .. "/mason/packages"
 
     -- Paths
-    local jdtls_path = mason_registry.get_package("jdtls"):get_install_path()
-    local java_debug_path = mason_registry.get_package("java-debug-adapter"):get_install_path()
-    local java_test_path = mason_registry.get_package("java-test"):get_install_path()
+    local jdtls_path = mason_path .. "/jdtls"
+    local java_debug_path = mason_path .. "/java-debug-adapter"
+    local java_test_path = mason_path .. "/java-test"
 
     -- Build bundles for debugging
     local bundles = {}

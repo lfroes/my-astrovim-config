@@ -11,6 +11,7 @@
   "blink.cmp": { "branch": "main", "commit": "327fff91fe6af358e990be7be1ec8b78037d2138" },
   "blink.compat": { "branch": "main", "commit": "2ed6d9a28b07fa6f3bface818470605f8896408c" },
   "cmp-dap": { "branch": "master", "commit": "ea92773e84c0ad3288c3bc5e452ac91559669087" },
+  "csharpls-extended-lsp.nvim": { "branch": "master", "commit": "6eb1308c8f74adbcaa0d681a742f39d4165d063d" },
   "elixir-tools.nvim": { "branch": "main", "commit": "2b3dc7be1b9eea766bf6d75f519b05bd902e0c3a" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
   "gitsigns.nvim": { "branch": "main", "commit": "7010000889bfb6c26065e0b0f7f1e6aa9163edd9" },

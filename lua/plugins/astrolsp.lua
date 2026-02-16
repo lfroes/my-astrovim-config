@@ -62,7 +62,8 @@ return {
           "less",
           "html",
           "markdown",
-          "java",
+          "cs",
+          -- "java", -- disabled: jdtls formatter corrupts incomplete files
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",

@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1783458604784,
+  "projectRoot": "/Users/luizfroes/.config/nvim",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1783458604770,
+      "keyFiles": []
+    },
+    "ftdetect": {
+      "path": "ftdetect",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1783458604770,
+      "keyFiles": [
+        "elixir.lua"
+      ]
+    },
+    "lua": {
+      "path": "lua",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1783458604770,
+      "keyFiles": [
+        "community.lua",
+        "lazy_setup.lua",
+        "polish.lua"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "lua/plugins/user.lua",
+      "accessCount": 1,
+      "lastAccessed": 1783458636708,
+      "type": "file"
+    },
+    {
+      "path": "lua/plugins/astroui.lua",
+      "accessCount": 1,
+      "lastAccessed": 1783458639343,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

@@ -8,22 +8,19 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  -- Tokyo Night theme
+  -- Catppuccin theme
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
     opts = {
-      style = "day",
-      transparent = false,
-      terminal_colors = true,
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
+      transparent_background = false,
+      term_colors = true,
       styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = {},
-        variables = {},
-        sidebars = "normal",
-        floats = "normal",
+        comments = { "italic" },
+        keywords = { "italic" },
       },
     },
   },
